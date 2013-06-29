@@ -1,0 +1,9 @@
+---
+:User:
+  :avatar:
+  - :medium
+  - :small
+  - :thumb
+:Scramble:
+  :image:
+  - :medium

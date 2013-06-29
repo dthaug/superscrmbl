@@ -1,0 +1,28 @@
+<div class="box">
+    <%= link_to (image_tag scramble.image(:small)), scramble %>
+         <div id="backing">
+        <ul>
+
+          <li class="stats" id="backers">
+           <%= scramble.orders.count %>
+            <span>interested</span>
+          </li>
+
+          <li class="stats">
+            1,568$
+            <span>of 6,648$ </span>
+          </li>
+
+          <li class="stats" id="days">
+            12
+            <span>hours left</span>
+          </li>
+
+        </ul>
+    </div>
+    
+    <div id="buttonsscramble">
+          <%= link_to 'Edit', edit_scramble_path(scramble), class: "btn btn-success" %>
+          <%= link_to 'Delete', scramble, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-warning" %>
+      </div>
+</div>
