@@ -35,8 +35,11 @@ class OrdersController < ApplicationController
 
     respond_to do |format|
     if @order.save
-        format.html { redirect_to @scramble, notice: 'Order was successfully created.' }
-        format.json { head :no_content }
+        format.html { redirect_to @scramble,
+                     notice: 'Order was successfully created.' }
+        format.json { render json: [@scramble, @order],
+                             status: :created,
+                             location: [@scramble, @order] }
     else
         format.html { render action: "new" }
         format.json { render json: @order.errors, status: :unprocessable_entity }

@@ -1,6 +1,6 @@
 <div class="row-fluid" id="scramble">
-	<div class="span12"> <!-- Image, price and milestone view. -->
 
+	<div class="span12"> <!-- Image, price and milestone view. -->
 		<div class="span6">
 		
 <%= image_tag @scramble.image(:medium) %>
@@ -8,17 +8,23 @@
     </div>
 
     <div class="span6" id="pricemodule">
-<div id="progress_bar"></div>
-    <h3>
- <%= number_to_currency(@scramble.price) %>
-    </h3>
+
+<%= milestone_bar([0, @scramble.orders.count ], [20,35], 100, ["20%", "35%"]) %>
+   
     <div id="noDays"></div> 
    
+    
+   <%= link_to "Reserve this scramble", new_scramble_order_path(@scramble), class: "btn btn-success btn-large", id: "buybtn" %>
 
-   <%= link_to "Reserve this scramble", new_scramble_order_path(@scramble), class: "btn btn-success btn-large" %>
+      <span id="scramblestats">  Current price : <%= number_to_currency(@scramble.price) %>
+     </span> 
+
+
 
     </div>
+
 </div>
+
  <div class="span12"> <!-- Title, description and retailer view. -->
    <div class="span8">
     <h2>
@@ -30,21 +36,27 @@
 	</p>
   </div>
 
+<!-- Scramble share and retailer -->
+
  <div class="span4">
+ 	<h3> Scramble by </h3>
 	<p>
 	  <%= image_tag @scramble.user.avatar(:thumb), id: "avatarshow" %> <%= @scramble.user.name %> <br><i><small>
 	  "<%= @scramble.user.description %>"
 	</small></i>
 	</p>
 
-
 	<% if current_user == @scramble.user %>
-		
-	<%= link_to 'Edit', edit_scramble_path(@scramble), class: "btn btn-primary" %>
-
+		<%= link_to 'Edit', edit_scramble_path(@scramble), class: "btn btn-primary" %>
 	<% end %>
 
+</div>
+
+<!-- Share buttons -->
+<div class="span4" id="scrambleshare">
+	<h3> Share this scramble with your friends. </h3>
 	</div>
+
   </div>
 </div>
 
