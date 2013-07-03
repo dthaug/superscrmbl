@@ -7,7 +7,7 @@ class ScramblesController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @scrambles }
+      format.json { render json: @scrambles.to_json }
     end
   end
 
@@ -18,7 +18,7 @@ class ScramblesController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @scramble }
+      format.json { render json: @scramble.to_json }
       format.js
     end
   end
@@ -28,7 +28,7 @@ class ScramblesController < ApplicationController
 
     respond_to do |format|
       format.html # new.html.erb
-      format.json { render json: @scramble }
+      format.json { render json: @scramble.to_json }
     end
   end
 
