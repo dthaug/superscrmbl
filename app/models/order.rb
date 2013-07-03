@@ -6,5 +6,6 @@ class Order < ActiveRecord::Base
   
 
   belongs_to :scramble
+  belongs_to :milestone
 
 end

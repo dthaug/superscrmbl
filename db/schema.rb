@@ -11,7 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130626191303) do
+ActiveRecord::Schema.define(:version => 20130703174017) do
+
+  create_table "milestones", :force => true do |t|
+    t.integer  "discount"
+    t.integer  "limit"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "orders", :force => true do |t|
     t.string   "name"
@@ -25,15 +32,21 @@ ActiveRecord::Schema.define(:version => 20130626191303) do
 
   create_table "scrambles", :force => true do |t|
     t.string   "title"
-    t.integer  "price"
+    t.decimal  "price"
     t.string   "description"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
+    t.datetime "created_at",             :null => false
+    t.datetime "updated_at",             :null => false
     t.integer  "user_id"
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.string   "currentDiscountStatus"
+    t.integer  "totalBids"
+    t.string   "nextMilestone"
+    t.integer  "bidsUntilNextMilestone"
+    t.integer  "availableItems"
+    t.decimal  "currentPrice"
   end
 
   add_index "scrambles", ["user_id"], :name => "index_scrambles_on_user_id"
