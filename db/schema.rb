@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130703174017) do
+ActiveRecord::Schema.define(:version => 20130817153336) do
 
   create_table "milestones", :force => true do |t|
     t.integer  "discount"
@@ -34,19 +34,13 @@ ActiveRecord::Schema.define(:version => 20130703174017) do
     t.string   "title"
     t.decimal  "price"
     t.string   "description"
-    t.datetime "created_at",             :null => false
-    t.datetime "updated_at",             :null => false
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
     t.integer  "user_id"
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
-    t.string   "currentDiscountStatus"
-    t.integer  "totalBids"
-    t.string   "nextMilestone"
-    t.integer  "bidsUntilNextMilestone"
-    t.integer  "availableItems"
-    t.decimal  "currentPrice"
   end
 
   add_index "scrambles", ["user_id"], :name => "index_scrambles_on_user_id"
@@ -70,6 +64,8 @@ ActiveRecord::Schema.define(:version => 20130703174017) do
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
     t.string   "description"
+    t.string   "provider"
+    t.string   "uid"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

@@ -50,8 +50,6 @@ class ScramblesController < ApplicationController
     end
   end
 
-  # PUT /scrambles/1
-  # PUT /scrambles/1.json
   def update
     @scramble = current_user.scrambles.find(params[:id])
 
