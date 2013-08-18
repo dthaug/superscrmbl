@@ -13,10 +13,6 @@ gem 'omniauth-facebook'
 gem 'omniauth'
 gem 'oauth2'
 
-group :production do
-  gem 'pg'
-end
-
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails',      ">= 2.0.0.beta"
