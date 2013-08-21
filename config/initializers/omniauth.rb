@@ -1,3 +1,4 @@
+OmniAuth.config.logger = Rails.logger
 
 if Rails.env == 'development' || Rails.env == 'test'
   Rails.application.config.middleware.use OmniAuth::Builder do
