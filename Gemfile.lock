@@ -39,8 +39,6 @@ GEM
     bcrypt-ruby (3.0.1-x86-mingw32)
     bootstrap-sass (2.2.2.0)
       sass (~> 3.2)
-    bootstrap-will_paginate (0.0.6)
-      will_paginate
     builder (3.0.4)
     chunky_png (1.2.7)
     climate_control (0.0.3)
@@ -185,7 +183,6 @@ GEM
     uuidtools (2.1.4)
     warden (1.2.1)
       rack (>= 1.0)
-    will_paginate (3.0.3)
 
 PLATFORMS
   ruby
@@ -195,7 +192,6 @@ DEPENDENCIES
   activerecord-postgresql-adapter
   aws-sdk
   bootstrap-sass (~> 2.2.2.0)
-  bootstrap-will_paginate (= 0.0.6)
   coffee-rails (~> 3.2.1)
   compass-rails (~> 1.0.3)
   devise
@@ -204,7 +200,7 @@ DEPENDENCIES
   jquery-rails
   oauth2
   omniauth
-  omniauth-facebook
+  omniauth-facebook (= 1.4.0)
   paperclip (~> 3.0)
   pg
   rails (= 3.2.12)
@@ -214,4 +210,3 @@ DEPENDENCIES
   simple_form
   sqlite3
   uglifier (>= 1.0.3)
-  will_paginate (= 3.0.3)
