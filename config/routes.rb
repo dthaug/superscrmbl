@@ -11,7 +11,7 @@
 
   match '/about' => 'static_pages#about'
   match '/contact' => 'static_page#contact'  
-  match "/auth/failure" => redirect("/")
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
