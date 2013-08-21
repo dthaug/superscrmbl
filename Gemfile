@@ -12,6 +12,7 @@ gem 'bootstrap-will_paginate', '0.0.6'
 gem 'omniauth-facebook'
 gem 'omniauth'
 gem 'oauth2'
+gem 'rmagick'
 
 group :production do
 	gem 'pg'
