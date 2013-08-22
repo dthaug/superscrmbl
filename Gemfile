@@ -9,7 +9,7 @@ gem 'aws-sdk'
 gem 'faker', '1.1.2'
 gem 'oauth2'
 gem 'omniauth'
-gem 'omniauth-facebook', '1.4.0'
+gem 'omniauth-facebook'
 gem 'rmagick'
 
 group :production do

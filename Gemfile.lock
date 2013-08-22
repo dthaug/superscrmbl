@@ -200,7 +200,7 @@ DEPENDENCIES
   jquery-rails
   oauth2
   omniauth
-  omniauth-facebook (= 1.4.0)
+  omniauth-facebook
   paperclip (~> 3.0)
   pg
   rails (= 3.2.12)
