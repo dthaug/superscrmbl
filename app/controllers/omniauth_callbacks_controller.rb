@@ -1,5 +1,8 @@
 class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   
+  raise env["omniauth.auth"].to_yaml
+
+
   def passthru
     send(params[:provider]) if providers.include?(params[:provider])
   end
