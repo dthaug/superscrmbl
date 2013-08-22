@@ -1,6 +1,5 @@
 class OmniauthCallbacksController < Devise::OmniauthCallbacksController
-
-
+  
   def passthru
     send(params[:provider]) if providers.include?(params[:provider])
   end
