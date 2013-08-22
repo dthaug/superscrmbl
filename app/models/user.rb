@@ -19,9 +19,6 @@ def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
       return user
     else
       registered_user = User.where(:email => auth.info.email).first
-      if auth.info.image.present?
-      user.update_attribute(:image, auth.info.image)
-    end
       if registered_user
         return registered_user
       else
