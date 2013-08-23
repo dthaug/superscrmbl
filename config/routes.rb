@@ -4,11 +4,11 @@
   resources :orders
   end
 
-devise_for :user, :controllers => { :registration => "registration", :omniauth_callbacks => "omniauth_callbacks" }
+  devise_for :user, :controllers => { :registration => "registration", :omniauth_callbacks => "omniauth_callbacks" }
 
-devise_scope :user do
-  get '/users/auth/:provider' => 'users/omniauth_callbacks#passthru'
-end
+    devise_scope :user do
+      get '/users/auth/:provider' => 'users/omniauth_callbacks#passthru'
+    end
 
   root :to => "static_pages#home"
 
