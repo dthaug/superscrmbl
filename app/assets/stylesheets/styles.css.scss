@@ -4,13 +4,13 @@ $baseFont: white;
 
 $btnPrimaryBackground: #e74c3c;
 $btnPrimaryBackgroundHighlight: #e74c3c;
-$navbarBackgroundHighlight: #e74c3c;
-$navbarBackground: #e74c3c;
+$navbarBackgroundHighlight: #ecf0f1;
+$navbarBackground: #ecf0f1;
 
 
 @import 'bootstrap';
 body {
-	padding-top: 60px;
+	padding-top: 40px;
 	background: #ecf0f1;
 }
 
@@ -21,7 +21,7 @@ body {
 
 .navbar-inner {
 	@include box-shadow(none !important);
-	border: 0;
+	border: 1px solid #CCC;
 	color: #FFF !important;
 
 }
@@ -35,6 +35,7 @@ body {
 		color: $gray;
 	}
 
+<<<<<<< HEAD
 			span {
 		margin: 0 21px;
 		display: -moz-inline-stack;
@@ -43,6 +44,16 @@ body {
 		zoom: 1;
 		line-height: 2em;
 			}
+=======
+	span {
+	margin: 0 21px;
+	display: -moz-inline-stack;
+	display: inline-block;
+	vertical-align: middle;
+	zoom: 1;
+	line-height: 2em;
+	}
+>>>>>>> 8d17f38b7c031500895af69037774b5e2257f881
 
 }
 
@@ -78,13 +89,13 @@ body {
 	-moz-box-shadow:    3px 3px 0px rgba(50, 50, 50, 0.28);
 	box-shadow:         3px 3px 0px rgba(50, 50, 50, 0.28);
 
-	p {
-		margin: 10px 10px 10px 10px;
-	}
+		p {
+			margin: 10px 10px 10px 10px;
+		}
 
-	h2 {
-		margin: 5px 10px 5px 10px;
-	}
+		h2 {
+			margin: 5px 10px 5px 10px;
+		}
 
 }
 
@@ -115,7 +126,7 @@ body {
 	text-align: center;
 	width: 100%;
 	height: 280px;
-	padding-top: 80px;
+	padding-top: 90px;
 	background: transparent url(../assets/43.jpg) no-repeat center top;
 	background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(50%, rgba(0,0,0,0)), color-stop(100%, rgba(0,0,0,0.2))),url(../images/photo.jpg) no-repeat center top;
 	background: -webkit-linear-gradient(rgba(0,0,0,0) 50%,rgba(0,0,0,0.2) 100%),url(../assets/43.jpg) no-repeat center top;
@@ -181,7 +192,13 @@ body {
 	margin: 5px 5px 5px 0;
 }
 
+<<<<<<< HEAD
 #aboutpage {
 	background: #FFF;
 	padding: 5px 5px 5px 5px;
+=======
+#avatarheader {
+	margin-top: 5px;
+	margin-left: 15px;
+>>>>>>> 8d17f38b7c031500895af69037774b5e2257f881
 }
