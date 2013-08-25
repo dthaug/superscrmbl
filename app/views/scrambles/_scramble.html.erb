@@ -7,21 +7,19 @@
          <div id="backing">
         <ul>
 
-          <li class="stats" id="backers">
+          <li class="stats">
            <%= scramble.orders.count %>
             <span>interested</span>
           </li>
 
           <li class="stats">
-            1,568$
-            <span>of 6,648$ </span>s
+            <%= number_to_currency(scramble.price) %>
           </li>
 
         
 
           <li class="stats" id="days">
-            12
-            <span>hours left</span>
+            <%= time_ago_in_words(scramble.created_at) %>
           </li>
 
         </ul>

@@ -35,8 +35,8 @@ body {
 		color: $gray;
 	}
 
-<<<<<<< HEAD
-			span {
+	span {
+
 		margin: 0 21px;
 		display: -moz-inline-stack;
 		display: inline-block;
@@ -44,7 +44,7 @@ body {
 		zoom: 1;
 		line-height: 2em;
 			}
-=======
+
 	span {
 	margin: 0 21px;
 	display: -moz-inline-stack;
@@ -53,7 +53,6 @@ body {
 	zoom: 1;
 	line-height: 2em;
 	}
->>>>>>> 8d17f38b7c031500895af69037774b5e2257f881
 
 }
 
@@ -85,6 +84,7 @@ body {
 #scramble {
 	background: #FFF;
 	padding: 5px 5px 10px 5px ;
+	margin-top: 20px;
 	-webkit-box-shadow: 3px 3px 0px rgba(50, 50, 50, 0.28);
 	-moz-box-shadow:    3px 3px 0px rgba(50, 50, 50, 0.28);
 	box-shadow:         3px 3px 0px rgba(50, 50, 50, 0.28);
@@ -192,13 +192,28 @@ body {
 	margin: 5px 5px 5px 0;
 }
 
-<<<<<<< HEAD
+
 #aboutpage {
 	background: #FFF;
 	padding: 5px 5px 5px 5px;
-=======
+	margin-top: 20px;
+	-webkit-box-shadow: 3px 3px 0px rgba(50, 50, 50, 0.28);
+	-moz-box-shadow:    3px 3px 0px rgba(50, 50, 50, 0.28);
+	box-shadow:         3px 3px 0px rgba(50, 50, 50, 0.28);
+}
+
 #avatarheader {
 	margin-top: 5px;
 	margin-left: 15px;
->>>>>>> 8d17f38b7c031500895af69037774b5e2257f881
+	border: 1px solid #CCC;
+}
+
+#addscramblenav {
+	text-align: center;
+}
+
+#createscramblebtn {
+	margin-right: 23em;
+	border-left: 1px solid #CCC;
+	border-right: 1px solid #CCC;
 }
