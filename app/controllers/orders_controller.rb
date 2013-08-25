@@ -1,6 +1,7 @@
 class OrdersController < ApplicationController
 
   before_filter(:get_scramble)
+  before_filter :authenticate_user!
 
   def index
     @orders = Order.all

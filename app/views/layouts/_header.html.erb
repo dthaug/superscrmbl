@@ -17,7 +17,7 @@
       <div class="nav-collapse collapse">
 		    <ul class="nav pull-right">
           <% if user_signed_in? %>
-
+            <li><%= link_to "Add scramble", new_scramble_path %> </li>
             <li><%= link_to current_user.name, edit_user_registration_path, :'data-toggle' => 'dropdown', :class => 'dropdown-toggle' %><ul class="dropdown-menu">
             <li><%= link_to "Dashboard", root_path %></li>
             <li><%= link_to "Edit Profile", edit_user_registration_path %></li>

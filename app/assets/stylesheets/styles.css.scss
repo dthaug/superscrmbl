@@ -35,14 +35,14 @@ body {
 		color: $gray;
 	}
 
-	span {
-margin: 0 21px;
-display: -moz-inline-stack;
-display: inline-block;
-vertical-align: middle;
-zoom: 1;
-line-height: 2em;
-	}
+			span {
+		margin: 0 21px;
+		display: -moz-inline-stack;
+		display: inline-block;
+		vertical-align: middle;
+		zoom: 1;
+		line-height: 2em;
+			}
 
 }
 
@@ -179,4 +179,9 @@ line-height: 2em;
 
 #scrambleshare {
 	margin: 5px 5px 5px 0;
+}
+
+#aboutpage {
+	background: #FFF;
+	padding: 5px 5px 5px 5px;
 }
