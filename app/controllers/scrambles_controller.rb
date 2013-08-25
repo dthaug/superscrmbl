@@ -1,6 +1,7 @@
 class ScramblesController < ApplicationController
 
   before_filter :authenticate_user!, except: [:show]
+  impressionist :actions => [:show]
 
   def index
     @scrambles = Scramble.order("created_at desc")
@@ -14,8 +15,7 @@ class ScramblesController < ApplicationController
 
   def show
     @scramble = Scramble.find(params[:id])
-  
-
+ 
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @scramble }

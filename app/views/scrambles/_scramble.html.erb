@@ -11,14 +11,16 @@
            <%= scramble.orders.count %>
             <span>interested</span>
           </li>
-
+  
           <li class="stats">
             <%= number_to_currency(scramble.price) %>
           </li>
 
-        
+          <li class="stats">
+           <span class="icon-eye-open"> <%= scramble.impressionist_count %> views </span>
+          </li>
 
-          <li class="stats" id="days">
+          <li class="stats">
             <%= time_ago_in_words(scramble.created_at) %>
           </li>
 

@@ -11,6 +11,8 @@ gem 'oauth2'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'rmagick'
+gem 'impressionist'
+
 
 group :production do
 	gem 'pg'
