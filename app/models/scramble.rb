@@ -5,8 +5,6 @@ class Scramble < ActiveRecord::Base
  
   belongs_to :user
 
-
-
   has_many :milestones, :dependent => :destroy
   has_many :orders, :dependent => :destroy
   accepts_nested_attributes_for :orders, :allow_destroy => :true
@@ -16,5 +14,9 @@ class Scramble < ActiveRecord::Base
  
   has_attached_file :image, styles: { medium: "400x400>",
                                       small:  "200x200#"}
+
+  def revenue
+    price * orders.count
+  end
 
 end

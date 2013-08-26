@@ -15,6 +15,8 @@
    <%= link_to "Reserve this scramble", new_scramble_order_path(@scramble), class: "btn btn-success btn-large", id: "buybtn" %>
 
       <span id="scramblestats">  Current price : <%= number_to_currency(@scramble.price) %>
+       <br>
+       Users reserved this: <%= @scramble.orders.count %>
      </span> 
 
 

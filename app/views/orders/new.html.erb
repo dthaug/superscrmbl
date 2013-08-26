@@ -1,6 +1,17 @@
-<h1>Your order for <%= @scramble.title %></h1>
+<div class="container" id="neworderscramble">
+	  <div class="row">
 
-<%= render 'form' %>
+		<div class="span8">
+		 <%= render 'form' %>
+		</div>
 
-<%= link_to 'Back to scramble', @scramble, class: "btn btn-primary" %>
+		<div class="span4">
+			<h3>Your order for <%= @scramble.title %></h3>
+			<p><%= @scramble.description %> </p>
+		</div>
+
+	
+	</div>
+</div>
+
 

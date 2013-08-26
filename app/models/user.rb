@@ -12,6 +12,7 @@ class User < ActiveRecord::Base
 									      :medium => "400x300" }
 
   has_many :scrambles, :dependent => :destroy
+  has_many :orders
 
 def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
     user = User.where(:provider => auth.provider, :uid => auth.uid).first

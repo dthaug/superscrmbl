@@ -1,10 +1,8 @@
-<div class="box">
-  <div class="span12">
-<center>  <h3> <%= scramble.title %> </h3> </center>
-  </div>
+<div class="row">
+  <div class="box">
+ <center>  <h3> <%= scramble.title %> </h3> </center>
 
     <%= link_to (image_tag scramble.image(:small)), scramble %>
-         <div id="backing">
         <ul>
 
           <li class="stats">
@@ -13,24 +11,26 @@
           </li>
   
           <li class="stats">
-            <%= number_to_currency(scramble.price) %>
+            <%= number_to_currency(scramble.revenue) %>
+            <span>revenue </span>
           </li>
 
           <li class="stats">
-           <span class="icon-eye-open"> <%= scramble.impressionist_count %> views </span>
+           <%= scramble.impressionist_count %> 
+           <span>views </span> <!-- view counter -->
           </li>
 
           <li class="stats">
             <%= time_ago_in_words(scramble.created_at) %>
+            <span> left </span>
           </li>
 
         </ul>
-
-    </div>
     
     <div id="buttonsscramble">
      
           <%= link_to 'Edit', edit_scramble_path(scramble), class: "btn btn-success" %>
           <%= link_to 'Delete', scramble, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-warning" %>
       </div>
+</div>
 </div>

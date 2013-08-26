@@ -4,7 +4,7 @@ class OrdersController < ApplicationController
   before_filter :authenticate_user!
 
   def index
-    @orders = Order.all
+    @orders = @scramble.orders.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,7 +13,7 @@ class OrdersController < ApplicationController
   end
 
   def show
-    @order = Order.find(params[:id])
+    @order = @scramble.orders.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
