@@ -8,8 +8,11 @@
     </div>
 
     <div class="span6" id="pricemodule">
+<<<<<<< HEAD
 
 <%= milestone_bar([0, @scramble.orders.count], [80, 175], 250, ["20%", "35%"]) %>
+=======
+>>>>>>> fb3ba2d04f4648df475f1b76fbff538aa4792658
    
     <div id="noDays"></div> 
    
@@ -17,6 +20,11 @@
    <%= link_to "Reserve this scramble", new_scramble_order_path(@scramble), class: "btn btn-success btn-large", id: "buybtn" %>
 
       <span id="scramblestats">  Current price : <%= number_to_currency(@scramble.price) %>
+<<<<<<< HEAD
+=======
+       <br>
+       Users reserved this: <%= @scramble.orders.count %>
+>>>>>>> fb3ba2d04f4648df475f1b76fbff538aa4792658
      </span> 
 
 
@@ -42,7 +50,7 @@
  	<h3> Scramble by </h3>
 	<p>
 	  <%= image_tag @scramble.user.avatar(:thumb), id: "avatarshow" %> <%= @scramble.user.name %> <br><i><small>
-	  "<%= @scramble.user.description %>"
+	  <%= @scramble.user.description %>
 	</small></i>
 	</p>
 

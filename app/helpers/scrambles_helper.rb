@@ -1,4 +1,2 @@
 module ScramblesHelper
-
-
 end

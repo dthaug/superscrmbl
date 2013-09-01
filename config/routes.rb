@@ -1,11 +1,14 @@
-ScBox::Application.routes.draw do
+  ScBox::Application.routes.draw do
 
   resources :scrambles do
   resources :orders
   end
 
+  devise_for :user, :controllers => { :registration => "registration", :omniauth_callbacks => "omniauth_callbacks" }
 
-  devise_for :users
+    devise_scope :user do
+      get '/users/auth/:provider' => 'users/omniauth_callbacks#passthru'
+    end
 
   root :to => "static_pages#home"
 

@@ -4,7 +4,6 @@ class Order < ActiveRecord::Base
   validates :name, :address, :email, :pay_type, presence: true
 
   
-
   belongs_to :scramble
   belongs_to :milestone
 

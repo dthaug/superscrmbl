@@ -3,9 +3,10 @@ class ScramblesController < ApplicationController
   skip_before_filter :verify_authenticity_token
   #before_filter      :authenticate_user!, :only => :show, :unless => :in_production
   before_filter :authenticate_user!, except: [:show]
+  impressionist :actions => [:show]
 
   def index
-    @scrambles = Scramble.order("created_at desc").page(params[:page]).per_page(20)
+    @scrambles = Scramble.order("created_at desc")
 
     respond_to do |format|
       format.html # index.html.erb
@@ -16,7 +17,7 @@ class ScramblesController < ApplicationController
 
   def show
     @scramble = Scramble.find(params[:id])
-
+ 
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @scramble.to_json }
@@ -50,8 +51,6 @@ class ScramblesController < ApplicationController
     end
   end
 
-  # PUT /scrambles/1
-  # PUT /scrambles/1.json
   def update
     @scramble = current_user.scrambles.find(params[:id])
 

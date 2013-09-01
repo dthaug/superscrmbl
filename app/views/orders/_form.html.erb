@@ -1,4 +1,5 @@
 <%= simple_form_for([@scramble, @order]) do |f| %>
+  
   <%= f.error_notification %>
   <%= hidden_field_tag 'scramble_id', @scramble.id  %>
 
@@ -11,6 +12,8 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit %>  <%= link_to 'Back to scramble', @scramble, class: "btn btn-primary" %>
   </div>
+
+
 <% end %>
