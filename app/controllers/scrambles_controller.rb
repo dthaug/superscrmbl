@@ -1,5 +1,7 @@
 class ScramblesController < ApplicationController
 
+  skip_before_filter :verify_authenticity_token
+  #before_filter      :authenticate_user!, :only => :show, :unless => :in_production
   before_filter :authenticate_user!, except: [:show]
 
   def index
@@ -14,12 +16,10 @@ class ScramblesController < ApplicationController
 
   def show
     @scramble = Scramble.find(params[:id])
-  
 
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @scramble.to_json }
-      format.js
     end
   end
 
@@ -42,10 +42,10 @@ class ScramblesController < ApplicationController
     respond_to do |format|
       if @scramble.save
         format.html { redirect_to @scramble, notice: 'Scramble was successfully created.' }
-        format.json { render json: @scramble, status: :created, location: @scramble }
+        format.json { render json: @scramble.to_json, status: :created, location: @scramble }
       else
         format.html { render action: "new" }
-        format.json { render json: @scramble.errors, status: :unprocessable_entity }
+        format.json { render json: @scramble.errors.to_json, status: :unprocessable_entity }
       end
     end
   end

@@ -1,4 +1,6 @@
-<div class="row-fluid">
+<html ng-app="scrambleSetup">
+<%= csrf_meta_tags %>
+<div class="row-fluid" ng-controller="NewScramble">
 <%= simple_form_for(@scramble, html: { class: "form-horizontal"}) do |f| %>
   <%= f.error_notification %>
   <%= f.full_error :image_file_size, class: "alert alert-error" %>
@@ -6,19 +8,35 @@
   <div class="span12">
     <div class="span6">
 
-    <%= f.input :title %>
-    <%= f.input :price %>
-    <%= f.input :description, as: :text, input_html: { rows: "5" } %>
+    <%= f.label :title %>
+    <%= f.text_field :title, :'ng-model' => 'newScramble.title' %><br/>
+    <%= f.label :price %>
+    <%= f.text_field :price, :'ng-model' => 'newScramble.price' %><br/>
+    <%= f.label :minimumPrice %>
+    <%= f.text_field :minimumPrice, :'ng-model' => 'newScramble.minimumPrice' %><br/>
+    <%= f.label :availableItems %>
+    <%= f.text_field :availableItems, :'ng-model' => 'newScramble.availableItems' %><br/>
+    <%= f.label :description %>
+    <%= f.text_area :description, rows: "5" , cols: "40", :'ng-model' => 'newScramble.description' %><br/>
+    
 </div>
 
  <div class="span6">
     <%= f.input :image, label: "Upload an image" %>
     <h3> Set your milestones </h3>
-    <%= f.input :milestone, label: "Set your milestones" %>
+
+      <form novalidate class="test-msform">
+          <input type="text" ng-model="newMilestone">
+          <input type="button" ng-click="addMilestone()" value="Add"><br/>
+            <li ng-repeat="milestone in milestones">
+              {{milestone}}
+            </li>
+      </form>
 
   </div>
+  </div>
   <div class="span4 offset2">
-      <%= f.button :submit, class: "btn btn-primary" %>
+      <%= submit_tag "Create scramble", :type => 'button', :'ng-click' => 'createScramble()', class: "btn btn-primary" %>
     </div>
 <% end %>
 </div>
