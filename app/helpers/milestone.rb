@@ -1,6 +1,4 @@
 module Milestone
-<<<<<<< HEAD
-
 def generate_scale(progress, total_items)
 
 	returnhtml = ""
@@ -107,7 +105,4 @@ def milestone_bar(progress, users_required, total_items, milestone_texts, option
 
 	return content_tag(:div, content.html_safe, id: "container", style: "width:#{width}")
 end
-
-=======
->>>>>>> fb3ba2d04f4648df475f1b76fbff538aa4792658
 end

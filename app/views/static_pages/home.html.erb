@@ -1,13 +1,10 @@
-<<<<<<< HEAD
 <% unless user_signed_in? %>
 
 
 	<div class="hero">
-=======
-<div class="hero">
->>>>>>> fb3ba2d04f4648df475f1b76fbff538aa4792658
-		<p id="pad">Welcome to ScrambleBox!</p>
 
+		<p id="pad">Welcome to ScrambleBox!</p>
+<%end%>
 <% unless user_signed_in? %>
 			<%= link_to "Sign Up Now", new_user_registration_path, class: "btn btn-primary btn-large" %>
 			<%= link_to "Login", new_user_session_path, class: "btn btn-primary btn-large" %>

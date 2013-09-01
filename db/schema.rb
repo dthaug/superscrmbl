@@ -11,10 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(:version => 20130831222129) do
-=======
-ActiveRecord::Schema.define(:version => 20130825213353) do
+ActiveRecord::Schema.define(:version => 20130831221704) do
 
   create_table "impressions", :force => true do |t|
     t.string   "impressionable_type"
@@ -40,7 +37,6 @@ ActiveRecord::Schema.define(:version => 20130825213353) do
   add_index "impressions", ["impressionable_type", "impressionable_id", "session_hash"], :name => "poly_session_index"
   add_index "impressions", ["impressionable_type", "message", "impressionable_id"], :name => "impressionable_type_message_index"
   add_index "impressions", ["user_id"], :name => "index_impressions_on_user_id"
->>>>>>> fb3ba2d04f4648df475f1b76fbff538aa4792658
 
   create_table "milestones", :force => true do |t|
     t.integer  "discount"
