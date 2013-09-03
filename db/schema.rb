@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130831221704) do
+ActiveRecord::Schema.define(:version => 20130901230620) do
 
   create_table "impressions", :force => true do |t|
     t.string   "impressionable_type"
@@ -41,8 +41,9 @@ ActiveRecord::Schema.define(:version => 20130831221704) do
   create_table "milestones", :force => true do |t|
     t.integer  "discount"
     t.integer  "limit"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.integer  "scramble_id"
   end
 
   create_table "orders", :force => true do |t|

@@ -4,7 +4,6 @@ class Milestone < ActiveRecord::Base
 
   belongs_to :scramble
   has_many :orders
-  respond_to :json
 
   validates :discount, :limit, presence: true
 end

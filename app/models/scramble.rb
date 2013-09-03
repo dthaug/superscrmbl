@@ -1,8 +1,6 @@
 class Scramble < ActiveRecord::Base
 
   attr_accessible :description, :price, :title, :image, :item_count
-
-  
   is_impressionable
  
   belongs_to :user

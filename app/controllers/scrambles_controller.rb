@@ -38,17 +38,21 @@ class ScramblesController < ApplicationController
   end
 
   def create
+    #respond_with current_user.scrambles.new(params[:scramble])
     @scramble = current_user.scrambles.new(params[:scramble])
+
 
     respond_to do |format|
       if @scramble.save
         format.html { redirect_to @scramble, notice: 'Scramble was successfully created.' }
-        format.json { render json: @scramble.to_json, status: :created, location: @scramble }
+        format.json { render json: @scramble, status: :created, location: @scramble }
       else
         format.html { render action: "new" }
-        format.json { render json: @scramble.errors.to_json, status: :unprocessable_entity }
+        format.json { render json: @scramble.errors, status: :unprocessable_entity }
       end
     end
+
+
   end
 
   def update
