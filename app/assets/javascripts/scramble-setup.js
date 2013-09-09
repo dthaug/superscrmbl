@@ -6,7 +6,7 @@ scrambleSetup.config(['$httpProvider', function ($httpProvider) {
     $httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 }]);
 
-scrambleSetup.controller('NewScramble', ['$scope','$location' , 'Milestone', 'Scramble', function($scope, $location, Milestone, Scramble){
+scrambleSetup.controller('NewScramble', ['$scope', '$location' , '$window', 'Milestone', 'Scramble', function($scope, $location, $window, Milestone, Scramble){
 	$scope.milestones = [];
 	$scope.scrambleTitle = '';
 	$scope.scramblePrice = '';
@@ -28,12 +28,13 @@ scrambleSetup.controller('NewScramble', ['$scope','$location' , 'Milestone', 'Sc
 		saveScramble.$save(function(resource){
 			$scope.saveMilestones(saveScramble.id);
 			console.log(saveScramble);
+			$window.location.href = 'http://localhost:3000/scrambles/' + saveScramble.id;
 		},
 		function(response){
 			alert(response.data.errors);
 			return;
 		});
-		$location.path('/scrambles/:scramble_id');
+		
 		
 	}
 
