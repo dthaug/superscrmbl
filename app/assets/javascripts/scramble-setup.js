@@ -6,7 +6,7 @@ scrambleSetup.config(['$httpProvider', function ($httpProvider) {
     $httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 }]);
 
-scrambleSetup.controller('NewScramble', ['$scope', 'Milestone', 'Scramble', function($scope, Milestone, Scramble){
+scrambleSetup.controller('NewScramble', ['$scope','$location' , 'Milestone', 'Scramble', function($scope, $location, Milestone, Scramble){
 	$scope.milestones = [];
 	$scope.scrambleTitle = '';
 	$scope.scramblePrice = '';
@@ -21,9 +21,9 @@ scrambleSetup.controller('NewScramble', ['$scope', 'Milestone', 'Scramble', func
 		var saveScramble = new Scramble();
 		saveScramble.title = $scope.scrambleTitle;
 		saveScramble.description = $scope.scrambleDescription;
-		saveScramble.availableItems = parseInt($scope.scrambleAvailableItems);
+		saveScramble.available_items = parseInt($scope.scrambleAvailableItems);
 		saveScramble.price = parseFloat($scope.scramblePrice);
-		saveScramble.minimumPrice = parseFloat($scope.scrambleMinPrice);
+		saveScramble.minimum_price = parseFloat($scope.scrambleMinPrice);
 		
 		saveScramble.$save(function(resource){
 			$scope.saveMilestones(saveScramble.id);
@@ -33,7 +33,7 @@ scrambleSetup.controller('NewScramble', ['$scope', 'Milestone', 'Scramble', func
 			alert(response.data.errors);
 			return;
 		});
-		
+		$location.path('/scrambles/:scramble_id');
 		
 	}
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130901230620) do
+ActiveRecord::Schema.define(:version => 20130903201601) do
 
   create_table "impressions", :force => true do |t|
     t.string   "impressionable_type"
@@ -71,9 +71,9 @@ ActiveRecord::Schema.define(:version => 20130901230620) do
     t.integer  "totalBids"
     t.string   "nextMilestone"
     t.integer  "bidsUntilNextMilestone"
-    t.integer  "availableItems"
     t.decimal  "currentPrice"
-    t.decimal  "minimumPrice"
+    t.integer  "available_items"
+    t.decimal  "minimum_price"
   end
 
   add_index "scrambles", ["user_id"], :name => "index_scrambles_on_user_id"
