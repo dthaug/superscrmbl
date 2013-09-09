@@ -2,16 +2,15 @@
 	<div class="span12">
 		<h3> Dashboard - <%= current_user.name %> </h3>
 		<!-- Navigation bar for dashboard -->
-		<div class="span2">
-
+		<div class="span6">
+<%= render @scrambles %>
 		</div>
 
 		<!-- View of elements -->
 
-		<div class="span10">
+		<div class="span5">
 
-			<%= render @scrambles %>
-
+      	<h1> You have <%= @scrambles.count %> scrambles </h1>
 		</div>
 
 		
