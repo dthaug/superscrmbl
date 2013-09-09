@@ -13,6 +13,8 @@
 
   root :to => "static_pages#home"
 
+  match '/dashboard' => 'dashboard#index'
+
   match '/about' => 'static_pages#about'
   match '/contact' => 'static_page#contact'  
 
