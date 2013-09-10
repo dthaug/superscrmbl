@@ -4,11 +4,11 @@ $baseFont: white;
 
 $btnPrimaryBackground: #e74c3c;
 $btnPrimaryBackgroundHighlight: #e74c3c;
-$navbarBackgroundHighlight: #ecf0f1;
-$navbarBackground: #ecf0f1;
+$navbarBackgroundHighlight: #FFF;
+$navbarBackground: #FFF;
 
 .clearfix:before, .clearfix:after { content: " "; display: table; }
-.clearfix:after { clear: both; }
+.clearfix:after { clear: both; }	
 
 @import 'bootstrap';
 body {
@@ -218,12 +218,12 @@ body {
 
 #avatarheader {
 	margin-top: 5px;
-	border: 1px solid #FFF;
 	border-radius: 20px;
 }
 
 #createscramblebtn {
 	font-size: 16px;
+	font-weight: 300;
     border-left: 1px solid #CCC;
     border-right: 1px solid #CCC;
 }
@@ -240,21 +240,22 @@ body {
 
 .facebooksign {
 	-moz-user-select: none;
-    background: #2A49A5;
+    background: #3B5998;
     border: 1px solid #082783;
-    box-shadow: 0 1px #4C6BC7 inset;
     color: white;
     padding: 3px 5px;
     text-decoration: none;
-    text-shadow: 0 -1px 0 #082783;
-    font: 12px Verdana, sans-serif;
-    width: 200px;
-    height: 30px;
+	font-weight: 500;
+    width: 230px;
+    height: 40px;
+
     a {
     	text-decoration: none;
+    	color: #FFF;
     }
+
     a:hover {
-    	color: white;
+    	color: #ecf0f1;
     }
 }
 
@@ -279,15 +280,30 @@ body {
 	border-bottom: 3px solid #e74c3c;
 	
 	h3 {
-		margin-top: 60px;
-		font-size: 30px;
-		margin-left: 40px;
+		margin-top: 70px;
+		font-size: 35px;
+		margin-left: 50px;
 		color: #FFF;
 		font-weight: 300;
 	}
 
 	img {
 		border-radius: 30px;
-		border: 1px solid #FFF;
+		border: 2px solid #FFF;
 	}
+
+	p {
+		font-size: 15px;
+		margin-left: 30px;
+		color: #FFF;
+		font-weight: 300;
+		margin-top: -15px;
+	}
+	i {
+		margin-top: 3px;
+	}
+}
+
+.dashinfo {
+	margin-left: 80px;
 }

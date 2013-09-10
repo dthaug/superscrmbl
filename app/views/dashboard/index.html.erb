@@ -1,22 +1,23 @@
 <div class="row-fluid">
-	
+
 		<div class="span12" id="dashboardtop">
 	    	<h3> <%= image_tag current_user.avatar(:small) %> <%= current_user.name %> </h3>
+	    	<div class="dashinfo"><p><i class="icon-map-marker icon-white"></i>  Austevoll, NOR</p> </div>
 		</div>
 
 	<div class="span12">
 
-		<div class="span7">
-			<%= render @scrambles %>
-		</div>
+			<div class="span7">
+				<%= render @scrambles %>
+			</div>
 
-		<div class="span4">
-			<center>
-	    	  	<h3> You have <%= @scrambles.count %> scrambles </h3>
-	        </center>
-		</div>
+			<div class="span4">
+				<center>
+		    	  	<h3> You have <%= @scrambles.count %> scrambles </h3>
+		        </center>
+			</div>
 
-		
+			
 	</div>
 </div>
 
