@@ -1,6 +1,6 @@
-$baseFontFamily: Lato;
+$baseFontFamily: Roboto;
 $baseFont: white;
-@import url(http://fonts.googleapis.com/css?family=Lato);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,500,300,700);
 
 $btnPrimaryBackground: #e74c3c;
 $btnPrimaryBackgroundHighlight: #e74c3c;
@@ -12,7 +12,7 @@ $navbarBackground: #ecf0f1;
 
 @import 'bootstrap';
 body {
-    font-family: 'Lato', Calibri, Arial, sans-serif;
+    font-family: 'Roboto', Calibri, Arial, sans-serif;
 	padding-top: 40px;
 	background: #ecf0f1;
 	color: #89867e;
@@ -71,14 +71,24 @@ body {
 	box-shadow:         3px 3px 0px rgba(50, 50, 50, 0.28);
 	width: 100%;
 	background: #FFF;
+	font-weight: 100;
+	
+	h3 {
+		font-weight: 300;
+	}
+
+	img {
+		diplay: block;
+		width: 20%;
+		float: right;
+		}
+
+	li {
+		list-style: none;
+		font-size: 20px;
+	}
 }
 
-.box img {
-	diplay: block;
-	width: 20%;
-	float: right;
-	
-}
 
 .description {
 	margin: 10px 2px 5px 2px;
@@ -179,7 +189,7 @@ body {
 }
 
 #buttonsscramble {
-	margin-left: 5px;
+	margin-left: 15px;
 }
 
 #scrambletitle {
@@ -207,9 +217,8 @@ body {
 }
 
 #avatarheader {
-	margin-top: 3px;
-	margin-left: 15px;
-	border: 2px solid #666;
+	margin-top: 5px;
+	border: 1px solid #FFF;
 	border-radius: 20px;
 }
 
@@ -253,4 +262,32 @@ body {
 	font-size: 18px;
 	font-weight: bold;
 	border: 1px solid #CCC;
+}
+
+#dashboardtop {
+	height: 200px;
+	background: transparent url(../assets/dashimg2.jpg) no-repeat center top, blur(2px); filter: url(#blur-effect-1);
+	background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(50%, rgba(0,0,0,0)), color-stop(100%, rgba(0,0,0,0.2))),url(../images/photo.jpg) no-repeat center top;
+	background: -webkit-linear-gradient(rgba(0,0,0,0) 50%,rgba(0,0,0,0.2) 100%),url(../assets/dashimg2.jpg) no-repeat center top;
+	background: -moz-linear-gradient(rgba(0,0,0,0) 50%,rgba(0,0,0,0.2) 100%),url(../assets/dashimg2.jpg) no-repeat center top;
+	background: -o-linear-gradient(rgba(0,0,0,0) 50%,rgba(0,0,0,0.2) 100%),url(../assets/dashimg2.jpg) no-repeat center top;
+	background: linear-gradient(rgba(0,0,0,0) 50%,rgba(0,0,0,0.2) 100%), url(../assets/dashimg2.jpg) no-repeat center top;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	border-bottom: 3px solid #e74c3c;
+	
+	h3 {
+		margin-top: 60px;
+		font-size: 30px;
+		margin-left: 40px;
+		color: #FFF;
+		font-weight: 300;
+	}
+
+	img {
+		border-radius: 30px;
+		border: 1px solid #FFF;
+	}
 }
