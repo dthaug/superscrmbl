@@ -1,7 +1,11 @@
   ScBox::Application.routes.draw do
 
+  get "users/show"
+
+  get "activities/index"
+
   resources :scrambles do
-  resources :orders, :defaults => {format: :json}
+  resources :orders
   resources :milestones, :defaults => {format: :json}
   end
  
@@ -16,7 +20,8 @@
   match '/dashboard' => 'dashboard#index'
 
   match '/about' => 'static_pages#about'
-  match '/contact' => 'static_page#contact'  
+  match '/contact' => 'static_page#contact'
+  match 'users/:id' => 'users#show', as: :user  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,19 +1,13 @@
-
 <div class="navbar navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container">
- 
-      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
 
- 
-      <!-- Be sure to leave the brand out there if you want it shown -->
       <%= link_to "ScrambleBox", root_path, class: "brand" %>
 
       <ul class="nav pull-left">
          <li><%= link_to "Create scramble", new_scramble_path, id: "createscramblebtn" %> </li>
       </ul>
 
-      <!-- Everything you want hidden at 940px or less, place within here -->
 		    <ul class="nav pull-right">
           <% if user_signed_in? %>
 

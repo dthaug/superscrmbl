@@ -24,6 +24,7 @@ class OrdersController < ApplicationController
   def new
       @scramble = Scramble.find(params[:scramble_id])
       @order = @scramble.orders.build
+
   end
 
   def edit
@@ -36,6 +37,7 @@ class OrdersController < ApplicationController
 
     respond_to do |format|
     if @order.save
+        @order.create_activity :create, owner: current_user
         format.html { redirect_to @scramble,
                      notice: 'Order was successfully created.' }
         format.json { render json: [@scramble, @order],
@@ -65,6 +67,7 @@ class OrdersController < ApplicationController
   def destroy
     @order = Order.find(params[:id])
     @order.destroy
+    @order.create_activity :destroy, owner: current_user
 
     respond_to do |format|
       format.html { redirect_to orders_url }

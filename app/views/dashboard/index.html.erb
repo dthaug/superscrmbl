@@ -1,19 +1,26 @@
-<div class="row-fluid">
+<div class="row">
 
 		<div class="span12" id="dashboardtop">
 	    	<h3> <%= image_tag current_user.avatar(:small) %> <%= current_user.name %> </h3>
-	    	<div class="dashinfo"><p><i class="icon-map-marker icon-white"></i>  Austevoll, NOR</p> </div>
+	    	<div class="dashinfo"><p><i class="icon-map-marker icon-white"></i>  Austevoll, NOR · scramblebox.com </p> </div>
 		</div>
 
-	<div class="span12">
-
-			<div class="span7">
+	<div class="span12" id="color-1a">
+			<div class="span6">
+			<center>	<h3> Your active scrambles </h3> </center>
 				<%= render @scrambles %>
 			</div>
 
-			<div class="span4">
+
+			<div class="span5" id="activityfeed">
 				<center>
-		    	  	<h3> You have <%= @scrambles.count %> scrambles </h3>
+		    	 	<h3>  Activity feed</h3>
+		    	 	<% @activities.each do |activity| %>
+						  <div class="activity">
+						    <%= link_to activity.owner.name, activity.owner if activity.owner %>
+    <%= render_activity activity %>
+						  </div>
+						<% end %>
 		        </center>
 			</div>
 

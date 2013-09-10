@@ -1,0 +1,7 @@
+added an order
+
+<% if activity.trackable %>
+  to <%= link_to activity.trackable.scramble.title, activity.trackable.scramble %>
+<% else %>
+  which has since been removed
+<% end %>

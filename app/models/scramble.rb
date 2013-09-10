@@ -1,5 +1,7 @@
 class Scramble < ActiveRecord::Base
-
+    include PublicActivity::Model
+  tracked owner: ->(controller, model) { controller && controller.current_user }
+  
   attr_accessible :description, :price, :title, :image, :available_items, :minimum_price
   is_impressionable
  

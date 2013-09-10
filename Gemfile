@@ -12,6 +12,7 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'rmagick'
 gem 'impressionist'
+gem 'public_activity'
 
 
 group :production do
